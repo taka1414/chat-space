@@ -13,17 +13,19 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
+|groupname|string|null: false, unique: true|
 ### Association
 - has_many :groups_users
 - has_many :comments
 - has_many :users,through:groups_users
+
 ## messegesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|image|string|
+|text|text|
 |user_id|integer|null: false, foreign_key: true|
-|groups_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :group
 - belongs_to :user
@@ -34,6 +36,5 @@
 |name|string|index: true, null: false, unique: true|
 |mail|string|null: false|
 ### Association
-- has_many :groups,through:members
-- has_many :messages
-- has_many :users
+- belongs_to :group
+- belongs_to :user
