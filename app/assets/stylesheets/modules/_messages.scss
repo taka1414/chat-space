@@ -76,7 +76,6 @@
       justify-content: space-between;
       border-bottom: solid 1px #eee;
       overflow: scroll;
-      // padding: 10px;
       }
       .chat-main_group-box {
         margin-top: 35px;
@@ -108,8 +107,6 @@
       width: calc(100vw - 300px);
       padding: 35px 40px;
     }
-      .chat-main_message-box {
-      }
       .chat-main_message-contents {
         display: flex;
         margin-bottom: 12px;
@@ -157,7 +154,6 @@
             border-style: none;
           }
             .input-box_image {
-              // height: 50px;
               line-height: 50px;
               position: absolute;
               right: 10px;
@@ -176,11 +172,3 @@
           cursor: pointer;
         }
   }
-
-//   .input-box
-//   .input-box_text
-//     type a message
-//   .input-box_image
-//     a
-// .input-form-btn
-//   Send
