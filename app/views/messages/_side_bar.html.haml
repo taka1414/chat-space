@@ -4,15 +4,35 @@
       .side-header_box-username
         = current_user.name
       .side-header_box-menu
-        = link_to "#", class: "contents__btn contents__btn1" do
+        = link_to new_group_path, class: "contents__btn contents__btn1" do
           <i class="far fa-edit"></i>
         = link_to edit_user_path(current_user), class: "contents__btn contents__btn2" do
           <i class="fas fa-cog"></i>
   .side-ber_group-list
     .side-ber_group-box
-      .side-ber_group-name
-        techcanp
-      .side-ber_group-text
-        まだメッセージがありません
+      = link_to '#' do
+        .side-ber_group-name
+          tech
+        .side-ber_group-text
+          まだメッセージがありません
+
+
+-# .side-bar
+-#   .side-bar__user-name
+-#     .top-items
+-#       masa
+-#       .top-items__icons
+-#         = link_to new_group_path do
+-#           %i.fa.fa-pencil-square-o.header-items__icons--pen
+-#         = link_to edit_user_path(current_user.id) do
+-#           %i.fa.fa-cog.header-items__icons--cog
+-#   .side-bar__groups-list
+-#     - current_user.groups.each do |group|
+-#       .group
+-#         = link_to '#' do
+-#           .group__name
+-#             = group.name
+-#           .group__message
+-#             メッセージはまだありません。
 
 
