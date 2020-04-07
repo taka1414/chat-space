@@ -5,34 +5,16 @@
         = current_user.name
       .side-header_box-menu
         = link_to new_group_path, class: "contents__btn contents__btn1" do
-          <i class="far fa-edit"></i>
+          %i.far.fa-edit.header-items__icons--pen
         = link_to edit_user_path(current_user), class: "contents__btn contents__btn2" do
-          <i class="fas fa-cog"></i>
+          %i.fa.fa-cog.header-items__icons--cog
   .side-ber_group-list
-    .side-ber_group-box
-      = link_to '#' do
-        .side-ber_group-name
-          tech
-        .side-ber_group-text
-          まだメッセージがありません
+    - current_user.groups.each do |group|
+      .side-ber_group-box
+        = link_to group_messages_path(group) do
+          .side-ber_group-name
+            = group.name
+          .side-ber_group-text
+            = group.show_last_message
 
-
--# .side-bar
--#   .side-bar__user-name
--#     .top-items
--#       masa
--#       .top-items__icons
--#         = link_to new_group_path do
--#           %i.fa.fa-pencil-square-o.header-items__icons--pen
--#         = link_to edit_user_path(current_user.id) do
--#           %i.fa.fa-cog.header-items__icons--cog
--#   .side-bar__groups-list
--#     - current_user.groups.each do |group|
--#       .group
--#         = link_to '#' do
--#           .group__name
--#             = group.name
--#           .group__message
--#             メッセージはまだありません。
-
-
+  
