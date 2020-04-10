@@ -10,20 +10,7 @@
       = link_to edit_group_path(@group), class: "edit__btn edit__btn1" do
         Edit
   .chat-main_message-list
-    -# .chat-main_message-box
-    -#   .chat-main_message-contents
-    -#     .chat-main_message-name
-    -#     .chat-main_message-text
-    -#   .chat-main_message-comment
-    -# .chat-main_message-box
-    -#   .chat-main_message-contents
-    -#     .chat-main_message-name
-    -#     .chat-main_message-text
-    -#   .chat-main_message-comment
-     
-
-    .messages
-      = render partial: 'message', collection: @messages
+    = render partial: 'message', collection: @messages
 
   .form
     = form_for [@group, @message] do |f|
