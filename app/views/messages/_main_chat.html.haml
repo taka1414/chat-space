@@ -4,6 +4,7 @@
       .chat-main_group-text
         = @group.name
       .chat-main_group-member
+        Member :
         - @group.users.each do |user|
           = user.name
     .chat-main_group-btn
