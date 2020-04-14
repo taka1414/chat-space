@@ -57,6 +57,9 @@
         margin-bottom: 40px;
         // height: 91px;
         // weight: 300px;
+        a{
+          text-decoration: none;
+        }
       }
       &_group-name {
         font-size: 15px;
@@ -74,7 +77,7 @@
   
 
     }
-  }
+  
 
   .chat-main {
     &_group-info {
@@ -91,6 +94,7 @@
         .chat-main_group-text {
           color: #333333;
           margin-bottom: 15px;
+          font-size: 20px;
         }
         &_group-member {
           display: flex;
@@ -234,3 +238,5 @@
     width: 100%;
   }
 
+  
+}
