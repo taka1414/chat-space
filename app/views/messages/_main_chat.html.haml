@@ -12,6 +12,7 @@
         Edit
   .chat-main_message-list
     = render partial: 'message', collection: @messages
+    .message
 
   .form
     = form_for [@group, @message] do |f|

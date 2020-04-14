@@ -120,8 +120,10 @@
       width: calc(100vw - 300px);
       padding: 35px 40px;
       overflow: scroll;
-
     }
+      .message {
+        padding-bottom: 40px;
+      }
       .chat-main_message-contents {
         display: flex;
         margin-bottom: 12px;
@@ -237,6 +239,4 @@
     position: relative;
     width: 100%;
   }
-
-  
 }
